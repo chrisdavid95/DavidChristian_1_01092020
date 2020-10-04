@@ -1,0 +1,638 @@
+/************* PROPRIÉTÉ GÉNÉRAL PAGE ENTIÈRE ********************/
+
+#wrapper
+{
+	font-family: 'Raleway', sans-serif;
+	max-width: 1300px;
+	margin: auto;
+}
+a:visited
+{
+	color: unset;
+}
+a:hover, #activity img:hover
+{
+	opacity: 0.5;
+}
+a
+{
+	text-decoration: none;
+	color: black;
+}
+.section_title
+{
+	font-weight: bold;
+	margin: 15px;
+}
+.blue_stars
+{
+	color: #0065FC;
+}
+.grey_stars
+{
+	color: #F2F2F2;
+}
+/****************************** LE HEADER **********************/
+
+
+#top_page
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+#ancre_2, #ancre_registre_2
+{
+	display: none;
+}
+/****************************** NAVIGATION **********************/
+
+#ancre 
+{
+	display: flex;
+	align-items: center;
+}
+#ancre a:focus
+{
+	padding-top: 43px;
+	border-top: 2px solid #0065FC;
+	color: #0065FC;
+}
+#ancre_hosting, #ancre_activity, #ancre_registre
+{
+	margin-right: 40px;
+}
+#ancre_activity a
+{
+	color: black;
+}
+#ancre_registre a, #ancre_registre_2 a
+{
+	font-weight: bold;
+	color: #0065FC;
+}
+
+
+/********************  TITRE SOUS LE LOGO  ********************/
+
+
+.search_title
+{
+	margin-bottom: 0;
+}
+#under_search_title
+{
+	margin-top: 0;
+}
+
+/************************** BARRE DE RECHERCHE ***************/
+
+
+#map_marker
+{
+	width: 40px;
+	height: 40px;
+	background: #F2F2F2;
+	border-radius: 10px 0 0 10px;
+}
+#map_marker i
+{
+	position:relative;
+	top: 25%;
+	left: 40%;
+}
+#search_bar
+{
+	display: flex;
+}
+#search_bar_input
+{
+	border-color: #F2F2F2;
+    border-style: solid;
+}
+button
+{
+	color: white;
+    background-color: #0065FC;
+    border-style: solid;
+    border-color: #0065FC;
+    border-radius: 0 10px 10px 0;
+}
+
+
+/************************************** FILTRES ************************/
+
+
+#filtre
+{
+	font-size: 1.1em;
+	font-weight: bold;
+	display: flex;
+}
+#filtre p
+{
+	display: inline-block;
+	position: relative;
+    top: 17%;
+}
+#filtre a, #hosting_marseille a, #popular a
+{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+input[type="radio"]:checked  /** ça ici ca sert à rien mais je le garde pour moi **/
+{
+    visibility:hidden;
+}
+input[type="radio"]
+{
+    visibility:hidden;
+}
+#filtre i      /** ICONES **/
+{
+	position:relative;
+	top: 25%;
+	left: 25%;
+	color: #0065FC;
+	margin-right: 20px;
+}
+#filtre .i    /**  BACKGROUND ICONES**/
+{
+	display: inline-block;
+	border-radius: 25px;
+	width: 40px;
+	height: 40px;
+	background-color: #DEEBFF;
+}
+#filtre a   /** j'ai transformé mes liens en inline-bloc, pour pouvoir leur donner de la dimension **/
+{
+	display: inline-block;
+	border: 2px solid #F2F2F2;
+	border-radius: 25px;
+	height: 40px;
+	width: 160px;
+}
+.filtre_word  
+{
+	position: relative;
+    top: 25%;
+    left: 6%;
+}
+/** les filtres ne sont probablement pas fonctionnel, mais à default de connaissance; il y aura un peu de technique **/
+
+
+/*********************************** RENSEIGNEMENT SOUS LE FILTRE *****************/
+
+
+#info_icon
+{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-color: #F2F2F2;
+	border: 2px solid #F2F2F2;
+	border-radius: 25px;
+}
+#info_icon i
+{
+	color: #0065FC;
+	position: relative;
+	top: 10%;
+	left: 40%;
+}
+#info_p
+{
+	display: inline-block;
+	vertical-align: sub;
+}
+
+
+/******************************* HEBERGEMENT MARSEILLE ***********************/
+
+
+#hosting_marseille
+{
+	display: inline-grid;
+	min-width: 62%;
+	margin-right: 5%;
+	background-color: #F2F2F2;
+	border-radius: 25px;
+	padding: 10px;
+}
+#hosting_grid
+{
+	display: grid;
+	grid-template-areas: "1 1 1";
+}
+.hosting_bubble
+{
+	display: inline-block;
+	border-radius: 25px;
+	background-color: white;
+	padding: 5px;                    /** le padding qui donne la bordure blanche a la photo **/
+	width: 235px;
+	margin: 10px;
+}
+#hosting_marseille img 					/** propriété super importante concernant les photos **/
+{										
+	display: block;
+	object-fit: cover;
+	border-radius: 25px 25px 0 0;
+	height: 100px;
+	width: 235px;
+}
+.hosting_bubble_info
+{
+	margin-left: 10px;
+}
+.no_caps
+{
+	font-weight: 100;
+}
+#show_more
+{
+	margin: 15px;
+}
+
+
+/******************************* BLOC LES POPULAIRES ****************************/
+
+
+#popular
+{
+	display: inline-grid;
+	vertical-align: top;
+	max-width: 33%;
+	background-color: #F2F2F2;
+	border-radius: 25px;
+	padding: 10px;
+}
+#chart
+{
+	position: relative;
+	right: -45%;
+}
+#popular a
+{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	margin-bottom: 24px;
+}
+#popular img
+{
+	display: block;
+	object-fit: cover;
+	float: left;
+	border-radius: 25px 0 0 25px;
+	height: 135px;
+	width: 130px;
+}
+.popular_bubble
+{
+	display: block;
+	border-radius: 25px;
+	background-color: white;
+	padding: 5px;
+	width: 345px;
+	height: 135px;
+	margin: 10px;
+	margin-top: 20px;
+}
+.popular_bubble_info
+{
+	margin: 10px;
+}
+.popular_bubble p
+{
+	margin-left: 140px;
+}
+
+
+/*********************************** BLOC ACTIVITÉ À MARSEILLE ***********************/
+
+
+#activity_title
+{
+	margin-top: 50px;
+	font-weight: bold;
+}
+#activity
+{
+	display: flex;
+}
+.big_bubble, .small_bubble
+{
+	margin-right: 5%;
+}
+.activity_big_bubble, .activity_small_bubble_1, .activity_small_bubble_2, .activity_small_bubble_1_reverse, .activity_small_bubble_2_reverse
+{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+.activity_big_bubble img /** propriété appliqué aux 2 grande bulles **/
+{
+	display: block;
+	object-fit: cover;
+	border-radius: 25px 25px 0 0;
+	height: 390px;
+	width: 300px;
+}
+.activity_bubble_info  /** Titres de toutes les bulles **/
+{
+	width: 300px;
+    height: 60px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 10px 40px grey;
+}
+.activity_bubble_info span  /** Positionnement des titres **/
+{
+	padding: 20px;
+	display: block;
+}
+
+/* Propriétés des toutes les bulles du blocs activity */
+
+.activity_small_bubble_1 img
+{
+	display: block;
+	object-fit: cover;
+	border-radius: 25px 25px 0 0;
+	height: 175px;
+	width: 300px;
+}
+.activity_small_bubble_2 img
+{
+	margin-top: 40px;
+	display: block;
+	object-fit: cover;
+	border-radius: 25px 25px 0 0;
+	height: 115px;
+	width: 300px;
+}
+.activity_small_bubble_1_reverse img
+{
+	margin-top: 40px;
+	display: block;
+	object-fit: cover;
+	border-radius: 25px 25px 0 0;
+	height: 175px;
+	width: 300px;
+}
+.activity_small_bubble_2_reverse img
+{
+	display: block;
+	object-fit: cover;
+	border-radius: 25px 25px 0 0;
+	height: 115px;
+	width: 300px;
+}
+.huge_bubble
+{
+	display: flex;
+	margin-right: 5%;
+}
+/************************************* FOOTER *******************************/
+
+
+footer
+{
+	border-radius: 25px 25px 0 0;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    font-size: small;
+}
+/****************************************************************************/
+/***************************** Break-point **********************************/
+/***************************** ORDIANTEURS **********************************/
+/****************************************************************************/
+@media all and (max-width: 1310px)
+{
+	#popular
+	{
+		display: grid;
+		margin-top: 50px;
+		width: 795px;
+		max-width: unset;
+	}
+	#popular_grid
+	{
+		display: grid;
+		grid-template-areas: "1 1 1";
+	}
+	.popular_bubble
+	{
+		display: inline-block;
+		width: 235px;
+		height: unset;
+		margin: 10px;
+		margin-top: unset;
+	}
+	#popular img
+	{										
+		display: block;
+		object-fit: cover;
+		border-radius: 25px 25px 0 0;
+		height: 100px;
+		width: 235px;
+	}
+	.popular_bubble_info
+	{
+		margin: unset;
+		margin-left: 10px;
+	}
+	.popular_bubble p
+	{
+		margin-left: unset;
+	}
+	#activity
+	{
+		display: block;
+	}
+	.huge_bubble
+	{
+		margin-right: unset;
+		justify-content: space-evenly;
+		margin-bottom: 5%;
+	}
+}
+/****************************************************************************/
+/***************************** Break-point **********************************/
+/*****************************  TABLETTE   **********************************/
+/****************************************************************************/
+@media all and (max-width: 860px)
+{
+	#wrapper
+	{
+		margin: unset;
+		max-width: 720px;
+	}
+	#top_page
+	{
+		display: unset;
+		margin-top: 30px;
+	}
+	#filtre_grid
+	{
+		display: grid;
+   		grid-template-columns: repeat(2, 1fr);
+    	grid-gap: 10px;
+	}
+	#col1_row1
+	{
+		grid-column: 1;
+ 	   	grid-row: 1;
+	}
+	#col1_row2
+	{
+		grid-column: 1;
+		grid-row: 2;
+	}
+	#col1_row3
+	{
+		grid-column: 1;
+    	grid-row: 3;
+	}
+	#col2_row2
+	{
+		grid-column: 2;
+    	grid-row: 2;
+	}
+	#col2_row3
+	{
+		grid-column: 2;
+    	grid-row: 3;
+	}
+}
+/****************************************************************************/
+/********************************* Break-point ******************************/
+/********************************* SMARTPHONES ******************************/
+/****************************************************************************/
+@media all and (max-width: 500px)
+{
+	#wrapper
+	{
+		width: 400px;
+		display: grid;	
+	}
+	.section_title
+	{
+		text-align: center;
+	}
+	#top_page
+	{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	#ancre, #ancre_regitre
+	{
+		display: none;
+	}
+	#ancre_2
+	{
+		display: flex;
+		justify-content: space-evenly;
+		font-size: larger;
+		width: 370px;
+	}
+	#ancre_activity
+	{
+		margin-right: unset;
+
+	}
+	#ancre_registre_2
+	{
+		display: block;
+		grid-column: 2;
+    	grid-row: 1;
+    	position: relative;
+  	  	right: 100%;
+   		top: 32%;
+   		font-size: larger;
+    }
+    #ancre_2 a:focus
+    {
+    	border-bottom: 2px solid #0065FC;
+		color: #0065FC;
+	}
+    .search_title
+    {
+    	margin-bottom: 0;
+  		font-size: 1.5em;
+    	width: 370px;
+    	text-align: center;
+    }
+    #under_search_title
+    {
+    	text-align: center;
+    	width: 370px;
+    }
+    #search_bar
+    {
+    	width: 370px;
+    	justify-content: center;
+    }
+    #filtre p
+    {
+    	left: 87%;
+    }
+    #filtre_grid
+    {
+    	margin-left: 20px;
+    }
+    #info_p
+    {
+    	font-size: smaller;
+    }
+    #hosting_marseille, #popular
+    {
+    	display: block;
+    	width: 370px;
+    	min-width: 0%;
+    }
+    #hosting_grid, #popular_grid
+    {
+    	display: block;
+    	text-align: center;
+    }
+    .hosting_bubble, .popular_bubble
+    {
+    	display: block;
+    	justify-content: center;
+    	margin: auto;
+    	width: 360px;
+    	margin-bottom: 10px;
+    }
+    #hosting_marseille img, #popular img
+    {
+    	width: 360px;
+    	height: 150px;
+    }
+    .huge_bubble, .small_bubble
+    {
+    	display: block;
+    }
+    .big_bubble
+    {
+    	margin-bottom: 20px;
+    }
+    .activity_bubble_info, footer
+    {
+    	width: 370px;
+    }
+    .activity_big_bubble img, .activity_small_bubble_1 img, .activity_small_bubble_2 img, .activity_small_bubble_2_reverse img, .activity_small_bubble_1_reverse img
+    {
+    	width: 370px;
+    	height: 150px;
+    }
+    footer
+    {
+    	display: block;
+    	font-size: normal;
+    	text-align: center;
+    }
+}
