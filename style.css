@@ -1,16 +1,31 @@
-/************* PROPRIÉTÉ GÉNÉRAL PAGE ENTIÈRE ********************/
-
-#wrapper
+.container
 {
 	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
 	max-width: 1300px;
 	margin: auto;
+}
+header
+{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+footer
+{
+	border-radius: 25px 25px 0 0;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    font-size: small;
+    font-weight: 100;
 }
 a:visited
 {
 	color: unset;
 }
-a:hover, #activity img:hover
+a:hover
 {
 	opacity: 0.5;
 }
@@ -19,93 +34,75 @@ a
 	text-decoration: none;
 	color: black;
 }
-.section_title
-{
-	font-weight: bold;
-	margin: 15px;
-}
-.blue_stars
-{
-	color: #0065FC;
-}
-.grey_stars
-{
-	color: #F2F2F2;
-}
-/****************************** LE HEADER **********************/
-
-
-#top_page
-{
-	display: flex;
-	justify-content: space-between;
-	margin-top: 30px;
-}
-#ancre_2, #ancre_registre_2
-{
-	display: none;
-}
-/****************************** NAVIGATION **********************/
-
-#ancre 
+.menuNav
 {
 	display: flex;
 	align-items: center;
+	font-weight: 100;
 }
-#ancre a:focus
+.menuNav a:focus
 {
 	padding-top: 43px;
 	border-top: 2px solid #0065FC;
 	color: #0065FC;
 }
-#ancre_hosting, #ancre_activity, #ancre_registre
+.menuNav2 a:focus
+{
+    border-bottom: 2px solid #0065FC;
+    color: #0065FC;
+}
+.menuNav__button--places, .menuNav__button--activity, .menuNav__button--registre
 {
 	margin-right: 40px;
 }
-#ancre_activity a
-{
-	color: black;
-}
-#ancre_registre a, #ancre_registre_2 a
+.menuNav__button--registre a, .menuNav__button--registre2 a
 {
 	font-weight: bold;
 	color: #0065FC;
 }
-
-
-/********************  TITRE SOUS LE LOGO  ********************/
-
-
-.search_title
+.menuNav2, .menuNav__button--registre2
+{
+	display: none;
+}
+.title--margin
 {
 	margin-bottom: 0;
 }
-#under_search_title
+.title__quote
 {
-	margin-top: 0;
+	font-weight: 100;
 }
-
-/************************** BARRE DE RECHERCHE ***************/
-
-
-#map_marker
+.title--margin
+{
+	margin: 15px;
+}
+.rating--blue
+{
+	color: #0065FC;
+}
+.rating--grey
+{
+	color: #F2F2F2;
+}
+.searchBar
+{
+	display: flex;
+	margin-top: 20px;
+}
+.searchBar-icon__container
 {
 	width: 40px;
 	height: 40px;
 	background: #F2F2F2;
 	border-radius: 10px 0 0 10px;
 }
-#map_marker i
+.fa-map-marker-alt
 {
 	position:relative;
 	top: 25%;
 	left: 40%;
 }
-#search_bar
-{
-	display: flex;
-}
-#search_bar_input
+.searchBar__input
 {
 	border-color: #F2F2F2;
     border-style: solid;
@@ -118,74 +115,7 @@ button
     border-color: #0065FC;
     border-radius: 0 10px 10px 0;
 }
-
-
-/************************************** FILTRES ************************/
-
-
-#filtre
-{
-	font-size: 1.1em;
-	font-weight: bold;
-	display: flex;
-}
-#filtre p
-{
-	display: inline-block;
-	position: relative;
-    top: 17%;
-}
-#filtre a, #hosting_marseille a, #popular a
-{
-	color: black;
-	text-decoration: none;
-	font-weight: bold;
-}
-input[type="radio"]:checked  /** ça ici ca sert à rien mais je le garde pour moi **/
-{
-    visibility:hidden;
-}
-input[type="radio"]
-{
-    visibility:hidden;
-}
-#filtre i      /** ICONES **/
-{
-	position:relative;
-	top: 25%;
-	left: 25%;
-	color: #0065FC;
-	margin-right: 20px;
-}
-#filtre .i    /**  BACKGROUND ICONES**/
-{
-	display: inline-block;
-	border-radius: 25px;
-	width: 40px;
-	height: 40px;
-	background-color: #DEEBFF;
-}
-#filtre a   /** j'ai transformé mes liens en inline-bloc, pour pouvoir leur donner de la dimension **/
-{
-	display: inline-block;
-	border: 2px solid #F2F2F2;
-	border-radius: 25px;
-	height: 40px;
-	width: 160px;
-}
-.filtre_word  
-{
-	position: relative;
-    top: 25%;
-    left: 6%;
-}
-/** les filtres ne sont probablement pas fonctionnel, mais à default de connaissance; il y aura un peu de technique **/
-
-
-/*********************************** RENSEIGNEMENT SOUS LE FILTRE *****************/
-
-
-#info_icon
+.search-info__iconContainer
 {
 	display: inline-block;
 	width: 20px;
@@ -194,47 +124,111 @@ input[type="radio"]
 	border: 2px solid #F2F2F2;
 	border-radius: 25px;
 }
-#info_icon i
+.search-info
+{
+	display: inline-block;
+	vertical-align: sub;
+	font-weight: 100;
+}
+
+/************************************** FILTRES ************************/
+
+input[type="radio"]
+{
+    visibility: hidden;
+}
+.filter
+{
+	font-size: 1.1em;
+	display: flex;
+}
+.filter a   
+{
+	display: inline-block;
+	border: 2px solid #F2F2F2;
+	border-radius: 25px;
+	height: 40px;
+	width: 160px;
+	margin-top: 10px;
+}
+.filter__name  
+{
+	position: relative;
+    top: 25%;
+    left: 6%;
+}
+.filter__iconContainer    
+{
+	display: inline-block;
+	border-radius: 25px;
+	width: 40px;
+	height: 40px;
+	background-color: #DEEBFF;
+}
+.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog
+{
+	position:relative;
+	top: 25%;
+	left: 25%;
+	color: #0065FC;
+	margin-right: 20px;
+}
+.fa-info
 {
 	color: #0065FC;
 	position: relative;
 	top: 10%;
 	left: 40%;
 }
-#info_p
+.fa-chart-line
+{
+	position: relative;
+	right: -45%;
+}
+/******************************* SECTION RESEARCH ***********************/
+
+#places
+{
+	display: flex;
+    justify-content: space-between;
+}
+.places-results__container
 {
 	display: inline-block;
-	vertical-align: sub;
-}
-
-
-/******************************* HEBERGEMENT MARSEILLE ***********************/
-
-
-#hosting_marseille
-{
-	display: inline-grid;
-	min-width: 62%;
-	margin-right: 5%;
 	background-color: #F2F2F2;
 	border-radius: 25px;
 	padding: 10px;
+	max-width: 62%;
+	flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-#hosting_grid
+.places-results__container--width
 {
-	display: grid;
-	grid-template-areas: "1 1 1";
+	max-width: 29%;
+	vertical-align: top;
+	flex-direction: column;
 }
-.hosting_bubble
+.results__grid, .popular__grid
+{
+	display: inline-block;
+	text-align: center;
+}
+.results
 {
 	display: inline-block;
 	border-radius: 25px;
 	background-color: white;
-	padding: 5px;                    /** le padding qui donne la bordure blanche a la photo **/
+	padding: 5px;
+	margin: 10px;                  
 	width: 235px;
-	margin: 10px;
 }
-#hosting_marseille img 					/** propriété super importante concernant les photos **/
+.results__width-height-change
+{
+	width: 345px;
+	height: 130px;
+}
+.results__photo				
 {										
 	display: block;
 	object-fit: cover;
@@ -242,397 +236,372 @@ input[type="radio"]
 	height: 100px;
 	width: 235px;
 }
-.hosting_bubble_info
+.results__photo--float
 {
-	margin-left: 10px;
-}
-.no_caps
-{
-	font-weight: 100;
-}
-#show_more
-{
-	margin: 15px;
-}
-
-
-/******************************* BLOC LES POPULAIRES ****************************/
-
-
-#popular
-{
-	display: inline-grid;
-	vertical-align: top;
-	max-width: 33%;
-	background-color: #F2F2F2;
-	border-radius: 25px;
-	padding: 10px;
-}
-#chart
-{
-	position: relative;
-	right: -45%;
-}
-#popular a
-{
-	color: black;
-	text-decoration: none;
-	font-weight: bold;
-	margin-bottom: 24px;
-}
-#popular img
-{
-	display: block;
-	object-fit: cover;
 	float: left;
 	border-radius: 25px 0 0 25px;
-	height: 135px;
+	height: 130px;
 	width: 130px;
 }
-.popular_bubble
+.results__photo--sizeXL 
 {
-	display: block;
-	border-radius: 25px;
-	background-color: white;
-	padding: 5px;
-	width: 345px;
-	height: 135px;
-	margin: 10px;
-	margin-top: 20px;
-}
-.popular_bubble_info
-{
-	margin: 10px;
-}
-.popular_bubble p
-{
-	margin-left: 140px;
-}
-
-
-/*********************************** BLOC ACTIVITÉ À MARSEILLE ***********************/
-
-
-#activity_title
-{
-	margin-top: 50px;
-	font-weight: bold;
-}
-#activity
-{
-	display: flex;
-}
-.big_bubble, .small_bubble
-{
-	margin-right: 5%;
-}
-.activity_big_bubble, .activity_small_bubble_1, .activity_small_bubble_2, .activity_small_bubble_1_reverse, .activity_small_bubble_2_reverse
-{
-	color: black;
-	text-decoration: none;
-	font-weight: bold;
-}
-.activity_big_bubble img /** propriété appliqué aux 2 grande bulles **/
-{
-	display: block;
-	object-fit: cover;
-	border-radius: 25px 25px 0 0;
 	height: 390px;
 	width: 300px;
 }
-.activity_bubble_info  /** Titres de toutes les bulles **/
+.results__photo--sizeL
+{
+	height: 175px;
+	width: 300px;
+}
+.results__photo--sizeS
+{
+	height: 115px;
+	width: 300px;
+}
+.results__details
+{
+	margin-left: 10px;
+	margin-top: 0;
+    margin-bottom: 0;
+}
+.results__details--fontWeight100
+{
+	font-weight: 100;
+}
+.results__details--margin
+{
+	margin-left: 140px;
+}
+.results__details--boxshadow
 {
 	width: 300px;
-    height: 60px;
+	height: 60px;
     border-radius: 0 0 25px 25px;
     box-shadow: 0 10px 40px grey;
+    margin: 0;
 }
-.activity_bubble_info span  /** Positionnement des titres **/
+.results__details--boxshadow span  
 {
 	padding: 20px;
 	display: block;
 }
+.show_more
+{
+	margin: 15px;
+}
 
-/* Propriétés des toutes les bulles du blocs activity */
-
-.activity_small_bubble_1 img
-{
-	display: block;
-	object-fit: cover;
-	border-radius: 25px 25px 0 0;
-	height: 175px;
-	width: 300px;
-}
-.activity_small_bubble_2 img
-{
-	margin-top: 40px;
-	display: block;
-	object-fit: cover;
-	border-radius: 25px 25px 0 0;
-	height: 115px;
-	width: 300px;
-}
-.activity_small_bubble_1_reverse img
-{
-	margin-top: 40px;
-	display: block;
-	object-fit: cover;
-	border-radius: 25px 25px 0 0;
-	height: 175px;
-	width: 300px;
-}
-.activity_small_bubble_2_reverse img
-{
-	display: block;
-	object-fit: cover;
-	border-radius: 25px 25px 0 0;
-	height: 115px;
-	width: 300px;
-}
-.huge_bubble
-{
-	display: flex;
-	margin-right: 5%;
-}
-/************************************* FOOTER *******************************/
+/*********************************** BLOC ACTIVITY***********************/
 
 
-footer
+#activity
 {
-	border-radius: 25px 25px 0 0;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    background-color: #F2F2F2;
-    font-size: small;
+	margin-top: 50px;
 }
+.activity__grid
+{
+	display: grid;
+    grid-template-columns: repeat(4,300px);
+    grid-template-rows: repeat(1,215px);
+    position: relative;
+    justify-content: space-between;
+    transform: scale(1);
+    transition: transform 300ms;
+}
+.results__sizeXL
+{
+	grid-column: 1;
+    grid-row: 1;
+}
+.results__sizeXL2
+{
+	grid-column: 3;
+    grid-row: 1;
+}
+.results__sizeL
+{
+	grid-column: 2;
+    grid-row: 1;
+}
+.results__sizeL2
+{
+	grid-column: 4;
+    grid-row: 2;
+}
+.results__sizeS 
+{
+	grid-column: 2;
+    grid-row: 2;
+    position: absolute;
+    bottom: 0;
+}
+.results__sizeS2
+{
+	grid-column: 4;
+    grid-row: 1;
+}
+
+
 /****************************************************************************/
 /***************************** Break-point **********************************/
-/***************************** ORDIANTEURS **********************************/
+/*****************************  COMPUTERS  **********************************/
 /****************************************************************************/
+
+
 @media all and (max-width: 1310px)
 {
-	#popular
+	#places
 	{
-		display: grid;
+		flex-direction: column
+	}
+	
+	.places-results__container, .places-results__container--width
+	{
+		display: block;
+		max-width: 100%;
+	}
+	.places-results__container--width
+	{
 		margin-top: 50px;
-		width: 795px;
-		max-width: unset;
 	}
-	#popular_grid
-	{
-		display: grid;
-		grid-template-areas: "1 1 1";
-	}
-	.popular_bubble
+	.results__grid, .popular__grid
 	{
 		display: inline-block;
-		width: 235px;
+		text-align: center;
+	}
+	.results
+	{
+		margin: 20px;
+    	width: 28%;
+	}
+	.results__photo
+	{
+		width: 100%;
+		height: 130px;
+	}
+	.results__photo--sizeXL 
+	{
+		height: 390px;
+		width: 300px;
+	}
+	.results__photo--sizeL
+	{
+		height: 175px;
+		width: 300px;
+	}
+	.results__photo--sizeS
+	{
+		height: 115px;
+		width: 300px;
+	}
+	.results__details
+	{
+		margin-left: 20px;
+	}
+	.fa-chart-line
+	{
+		right: -85%;
+	}
+	.results__width-height-change
+	{
 		height: unset;
-		margin: 10px;
-		margin-top: unset;
 	}
-	#popular img
-	{										
-		display: block;
-		object-fit: cover;
-		border-radius: 25px 25px 0 0;
-		height: 100px;
-		width: 235px;
+	.results__photo--float
+	{
+		float: none;
+		border-radius: 25px 25px 0px 0px;
 	}
-	.popular_bubble_info
+	.results__details--margin
+	{
+		margin: 0 0 0 20px;
+	}
+}
+
+/***************************** Break-point **********************************/
+/******************************** IPAD **************************************/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+{
+	.container
 	{
 		margin: unset;
-		margin-left: 10px;
+		text-align: center;
 	}
-	.popular_bubble p
+	.searchBar
 	{
-		margin-left: unset;
+		place-content: center;
+	}
+	.searchBar-icon__container, .search-info__iconContainer
+	{
+		text-align: initial;
+	}
+	.filter a
+	{
+		width: 30%;
+	}
+	#col1_row2 span
+	{
+		position: relative;
+		left: -13%;
+	}
+	#col1_row3 span
+	{
+		position: relative;
+		left: -23%;
+	}
+	#col2_row2 span
+	{
+		position: relative;
+		left: -13%;
+	}
+	#col2_row3 span
+	{
+		position: relative;
+		left: -21%;
+	}
+	.results
+	{
+		margin: 10px;                  
+		width: 28%;
+	}
+	.results__photo
+	{
+		height: 100px;
+		width: 100%;
+	}
+	.activity__grid
+	{
+		grid-template-columns: repeat(4,200px);
+		grid-template-rows: repeat(1,170px);
+	}
+	.results__photo--sizeXL
+	{
+		height: 300px;
+		width: 200px;
+	}
+	.results__photo--sizeL
+	{
+		height: 130px;
+		width: 200px;
+	}
+	.results__photo--sizeS
+	{
+		height: 100px;
+		width: 200px;
+	}
+	.results__details--boxshadow
+	{
+		width: 200px;
 	}
 	#activity
 	{
-		display: block;
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
 	}
-	.huge_bubble
+	.activity__grid
 	{
-		margin-right: unset;
-		justify-content: space-evenly;
-		margin-bottom: 5%;
+		transform: scale(0.9);
 	}
 }
-/****************************************************************************/
-/***************************** Break-point **********************************/
-/*****************************  TABLETTE   **********************************/
-/****************************************************************************/
-@media all and (max-width: 860px)
+
+/****************************** Break-point *********************************/
+/****************************** SMARTPHONE **********************************/
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 767px)
 {
-	#wrapper
-	{
-		margin: unset;
-		max-width: 720px;
-	}
-	#top_page
+	header
 	{
 		display: unset;
-		margin-top: 30px;
 	}
-	#filtre_grid
+	.menuNav
 	{
-		display: grid;
-   		grid-template-columns: repeat(2, 1fr);
-    	grid-gap: 10px;
+		position: relative;
 	}
-	#col1_row1
+	.menuNav__button--places, .menuNav__button--activity, .menuNav__button--registre
 	{
-		grid-column: 1;
- 	   	grid-row: 1;
+		margin-right: unset;
+		margin-left: 55px;
 	}
-	#col1_row2
+	.menuNav__button--registre
 	{
-		grid-column: 1;
-		grid-row: 2;
+		position: absolute;
+		bottom: 175%;
+		right: 0%;
 	}
-	#col1_row3
-	{
-		grid-column: 1;
-    	grid-row: 3;
-	}
-	#col2_row2
-	{
-		grid-column: 2;
-    	grid-row: 2;
-	}
-	#col2_row3
-	{
-		grid-column: 2;
-    	grid-row: 3;
-	}
-}
-/****************************************************************************/
-/********************************* Break-point ******************************/
-/********************************* SMARTPHONES ******************************/
-/****************************************************************************/
-@media all and (max-width: 500px)
-{
-	#wrapper
-	{
-		width: 400px;
-		display: grid;	
-	}
-	.section_title
+	.search
 	{
 		text-align: center;
 	}
-	#top_page
+	.title--margin
+	{
+    	margin: 15px;
+    	text-align: center;
+    	font-size: 140%;
+	}
+	.searchBar
+	{
+		display: inline-flex;
+	}
+	.searchBar-icon__container
+	{
+		text-align: initial;
+	}
+	.filter__grid
 	{
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		transform: scale(1);
+	    transition: transform 300ms;
 	}
-	#ancre, #ancre_regitre
-	{
-		display: none;
-	}
-	#ancre_2
-	{
-		display: flex;
-		justify-content: space-evenly;
-		font-size: larger;
-		width: 370px;
-	}
-	#ancre_activity
-	{
-		margin-right: unset;
-
-	}
-	#ancre_registre_2
+	.filter
 	{
 		display: block;
-		grid-column: 2;
-    	grid-row: 1;
-    	position: relative;
-  	  	right: 100%;
-   		top: 32%;
-   		font-size: larger;
-    }
-    #ancre_2 a:focus
-    {
-    	border-bottom: 2px solid #0065FC;
-		color: #0065FC;
 	}
-    .search_title
+	.filter a
+	{
+		width: 100%;
+		display: inline-flex;
+	}
+	.filter__name
+	{
+		top: 20%;
+		left: 29%;
+	}
+	.search-info__iconContainer
+	{
+		display: inline-flex;
+	}
+	.results
+	{
+		width: 90%;
+	}
+	.results__photo
+	{
+		width: 100%;
+	}
+    .activity__grid
     {
-    	margin-bottom: 0;
-  		font-size: 1.5em;
-    	width: 370px;
-    	text-align: center;
+    	display: flex;
+    	flex-direction: column;
+    	text-align: -webkit-center;
+	}
+    .results__sizeS
+    {
+    	position: unset;
     }
-    #under_search_title
+    .results__details--boxshadow
     {
-    	text-align: center;
-    	width: 370px;
+    	width: 90%;
+    	margin-bottom: 8%;
     }
-    #search_bar
+    .results__photo--sizeXL, .results__photo--sizeL, .results__photo--sizeS
     {
-    	width: 370px;
-    	justify-content: center;
-    }
-    #filtre p
-    {
-    	left: 87%;
-    }
-    #filtre_grid
-    {
-    	margin-left: 20px;
-    }
-    #info_p
-    {
-    	font-size: smaller;
-    }
-    #hosting_marseille, #popular
-    {
-    	display: block;
-    	width: 370px;
-    	min-width: 0%;
-    }
-    #hosting_grid, #popular_grid
-    {
-    	display: block;
-    	text-align: center;
-    }
-    .hosting_bubble, .popular_bubble
-    {
-    	display: block;
-    	justify-content: center;
-    	margin: auto;
-    	width: 360px;
-    	margin-bottom: 10px;
-    }
-    #hosting_marseille img, #popular img
-    {
-    	width: 360px;
-    	height: 150px;
-    }
-    .huge_bubble, .small_bubble
-    {
-    	display: block;
-    }
-    .big_bubble
-    {
-    	margin-bottom: 20px;
-    }
-    .activity_bubble_info, footer
-    {
-    	width: 370px;
-    }
-    .activity_big_bubble img, .activity_small_bubble_1 img, .activity_small_bubble_2 img, .activity_small_bubble_2_reverse img, .activity_small_bubble_1_reverse img
-    {
-    	width: 370px;
-    	height: 150px;
+    	height: 140px;
+    	width: 90%;
     }
     footer
     {
+    	padding: 10px;
     	display: block;
-    	font-size: normal;
     	text-align: center;
     }
 }
