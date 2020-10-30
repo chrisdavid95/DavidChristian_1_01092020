@@ -36,8 +36,8 @@ button{color:white;background-color:#0065FC;border-style:solid;border-color:#006
 .results__grid, .popular__grid{display:inline-block;text-align:left}
 .results{display:inline-block;border-radius:25px;background-color:white;padding:5px;margin:10px;width:235px;}
 .results__width-height-change{width:345px;height:130px;}
-.results__photo	{display:block;object-fit:cover;border-radius:25px 25px 0 0;height:100px;width:235px}
-.results__photo--float{float:left;border-radius:25px 0 0 25px;height:130px;width:130px;}
+.results__photo	{display:block;object-fit:cover;border-radius:25px 25px 0 0;height:100px;width:100%}
+.results__photo--float{float:left;border-radius:25px 0 0 25px;height:130px;width:40%}
 .results__photo--sizeXL {height:390px;width:300px}
 .results__photo--sizeL{height:175px;width:300px}
 .results__photo--sizeS{height:115px;width:300px}
