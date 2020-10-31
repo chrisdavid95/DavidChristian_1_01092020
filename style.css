@@ -1,4 +1,4 @@
-body{font-family:'Raleway',sans-serif;font-weight:bold;max-width:1300px;margin:0 auto}
+body{font-family:'Raleway',sans-serif;font-weight:bold;max-width:1300px;margin:0 auto;width:98%}
 header{display:flex;justify-content:space-between;margin-top:30px}
 footer{border-radius:25px 25px 0 0;margin-top:50px;display:flex;justify-content:space-around;background-color:#F2F2F2;font-size:small;font-weight: 100}
 a:visited{color:unset}
