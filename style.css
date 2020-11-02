@@ -106,7 +106,7 @@ form{margin:auto;width:100%}
 .menuNav{text-align:center;border-bottom:2px solid #F2F2F2;display:flex}
 .menuNav a{display:inline-block;flex:1;flex-basis:50%;margin-right:0}
 .menuNav a:last-child{position:absolute;top:15px;right:1rem;font-size:0.85rem}
-#hebergement:focus, #afaire:focus{border-bottom:2px solid #0065FC;color:#0065FC;padding-top:0;border-top:none}
+#hebergement:focus, #activite:focus{border-bottom:2px solid #0065FC;color:#0065FC;padding-top:0;border-top:none}
 .menuNav__button--places, .menuNav__button--activity, .menuNav__button--registre{margin-right:unset;margin-left:55px}
 .menuNav__button--registre{position:absolute;bottom:175%;right:0%}.search{text-align:left}
 .searchBar{display:inline-flex}
